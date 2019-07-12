@@ -1,0 +1,373 @@
+<!-- Wszystkie elementy strony (style, obrazy) znajdują się w jednym pliku index.html i jest to spowodowane ograniczeniem całej dokumentacji do jednego pliku -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <title>Dokumentacja</title>
+</head>
+
+<body>
+  <div id="accordion" style="text-align: justify;">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            aria-controls="collapseOne">
+            Wprowadzenie
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          Projekt jest prostą aplikacją służącą do obliczeń ściśle związanych z obiektem jakim jest akwarium a także
+          symulacji pH wody się w nim znajdującej. Zbudowany jest w oparciu o eventową maszynę stanów i na podstawie danych wejściowych użytownika takich jak:
+          <center>
+            <div class="container h-100 d-flex justify-content-center text-center" style="margin: 10px 0px;">
+              <ul class="list-group">
+                <li class="list-group-item  list-group-item-success">Wysokość akwarium (wartość domyślna: 100)</li>
+                <li class="list-group-item  list-group-item-success">Długość akwarium (wartość domyślna: 50)</li>
+                <li class="list-group-item  list-group-item-success">Szerokość akwarium (wartość domyślna: 50)</li>
+                <li class="list-group-item  list-group-item-success">Grubość szkła (wartość domyślna: 8)</li>
+              </ul>
+            </div>
+          </center>
+          otrzymujemy dane wejściowe w zależności od akcji użytkownika (naciśnięcie jednego z przycisków):
+          <div id="accordion2" style="text-align: justify; margin-top: 10px;">
+            <div class="card">
+              <div class="card-header" id="headingOne-One">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne-One"
+                    aria-expanded="false" aria-controls="collapseOne-One">
+                    Przycisk Simulate
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseOne-One" class="collapse" aria-labelledby="headingOne-One" data-parent="#accordion2">
+                <div class="card-body">
+                  Użytkownik jako dane wyjściowe otrzymuje komplet informacji zawierający:
+                  <center>
+                    <div class="container h-100 d-flex justify-content-center text-center" style="margin: 10px 0px;">
+                      <ul class="list-group">
+                        <li class="list-group-item  list-group-item-warning">Objętość brutto</li>
+                        <li class="list-group-item  list-group-item-warning">Objętość netto</li>
+                        <li class="list-group-item  list-group-item-warning">Wymagana ilość wody</li>
+                        <li class="list-group-item  list-group-item-warning">pH wody w ciągu 23 dni (tablica)</li>
+                        <li class="list-group-item  list-group-item-warning">Rodzaje odczynów w ciągu 23 dni (tablica)</li>
+                        <li class="list-group-item  list-group-item-warning">Wykres pH wody w ciągu 23 dni</li>
+                      </ul>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+            <div id="accordion2" style="text-align: justify;">
+              <div class="card">
+                <div class="card-header" id="headingOne-Two">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne-Two"
+                      aria-expanded="false" aria-controls="collapseOne-Two">
+                      Przycisk Calculate
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOne-Two" class="collapse" aria-labelledby="headingOne-Two" data-parent="#accordion2">
+                  <div class="card-body">
+                    Użytkownik jako dane wyjściowe otrzymuje komplet informacji zawierający:
+                  <center>
+                    <div class="container h-100 d-flex justify-content-center text-center" style="margin: 10px 0px;">
+                      <ul class="list-group">
+                        <li class="list-group-item  list-group-item-warning">Waga pustego akwarium</li>
+                        <li class="list-group-item  list-group-item-warning">Minimalna waga pełnego akwarium</li>
+                      </ul>
+                    </div>
+                  </center>
+                  </div>
+                </div>
+              </div>
+              <div id="accordion2" style="text-align: justify;">
+                <div class="card">
+                  <div class="card-header" id="headingOne-Three">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne-Three"
+                        aria-expanded="false" aria-controls="collapseOne-Three">
+                        Przycisk Draw
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne-Three" class="collapse" aria-labelledby="headingOne-Three"
+                    data-parent="#accordion2">
+                    <div class="card-body">
+                      <div class="card-body" >
+                        Użytkownik jako dane wyjściowe otrzymuje komplet informacji zawierający:
+                        <center>
+                          <div class="container h-100 d-flex justify-content-center text-center" style="margin: 10px 0px;">
+                            <ul class="list-group">
+                              <li class="list-group-item  list-group-item-warning">Współrzędne X i Y mocnych punktów kompozycji</li>
+                              <li class="list-group-item  list-group-item-warning">Wykres mocnych punktów kompozycji</li>
+                            </ul>
+                          </div>
+                        </center>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="accordion2" style="text-align: justify; margin-bottom: 10px;">
+                <div class="card">
+                  <div class="card-header" id="headingOne-Four">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne-Four"
+                        aria-expanded="false" aria-controls="collapseOne-Four">
+                        Przycisk Stop
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne-Four" class="collapse" aria-labelledby="headingOne-Four"
+                    data-parent="#accordion2">
+                    <div class="card-body">
+                      Użytkownik otrzymuje komunikat, którego potwierdzenie kończy działanie programu. Z kolei jego
+                      odrzucenie sprawia, że program działa dalej (wraca do stanu Idle).
+                    </div>
+                  </div>
+                </div>
+              </div>
+              Wszystkie z wymienionych danych wejściowych są dokładnie opisane w dalszej części dokumentacji poświęconej
+              poszczególnym stanom wartości enumerycznych w pliku Main.vi.
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                SubVI
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              Program znajdujący się w pliku SubVI.vi zwraca informacje dotyczące akwarium i znajdującej się w nim wody.
+              Po otrzymaniu od użytkownika danych: wysokość, długość, szerokość (wszystkie podawane w centymetrach) oraz
+              grubości szkła (podawana w milimetrach) program liczy objętość brutto (teoretyczna, wyznaczona wyłącznie
+              na podstawie wymiarów akwarium bez uwzględnienia grubości szkła), objętość netto (właściwa, wyznaczona z
+              uwzglednieniem grubości szkła, które zawęża wewnętrzne wymiary) oraz wymagana ilość wody (minimalna
+              wartość, będąca 90% objętości netto) - wszystkie te wartości wyrażone są w litrach. Dodatkowo program
+              przeprowadza 23-dniową symulację współczynnika pH zmieniającego się dziennie o ±0,1-0,3 i przyjmując, że
+              woda w momencie nalania do akwarium była idealne (pH=7) i odrazu w pierwszym dniu (po dodaniu np. ryb)
+              zmieniła się. Wynikiem symulacji jest również tablica mówiąca czy dany współczynnik jest kwasowy, obojętny
+              lub zasadowy.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                States
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Plik States.ctl zawiera Type Definition zmiennej enumerycznej odpowiadającej za konkretne stany użyte w
+              programie Main.vi, który z kolei jest oparty o wzorzec projektowy maszyny stanów. Zmienna Enum może
+              przyjmować następujące wartości:
+            <center>
+              <div class="container h-100 d-flex justify-content-center text-center" style="margin: 10px 0px;">
+                <ul class="list-group">
+                  <li class="list-group-item  list-group-item-primary">Init</li>
+                  <li class="list-group-item  list-group-item-info">Idle</li>
+                  <li class="list-group-item  list-group-item-primary">Simulate</li>
+                  <li class="list-group-item  list-group-item-info">Calculate</li>
+                  <li class="list-group-item  list-group-item-primary">Draw</li>
+                  <li class="list-group-item  list-group-item-info">Stop</li>
+                </ul>
+              </div>
+            </center>
+              Wszyskie z wymienionych wartości są opisane w kolejnych punktach dokumentacji dotyczących działania
+              programu Main.vi.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                Main - stan Init
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Init w programie Main.vi odpowiada za przygotowanie całości aplikacji do
+              działania. W tym miejscu są przywracane do ustawień defaultowych wszystkie parametry wejściowe i dane
+              wyjściowe (skalary, tablice) a także czyszczone są wykresy. Dodatkowo tworzony jest kursor horyzontalny o
+              stałej wartości równej 7, będący linią odniesienia wartości optymalnej pH (w stanie Init jest on
+              niewidoczny) a po wykonaniu operacji wartość enumeryczna zmienia się na Idle (przechodzi do stanu Idle). Ponadto zmienia się wygląd punktów na wykresie (Plot.PointStyle=0, czyli jest niewidoczny).
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+                Main - stan Idle
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Idle w programie Main.vi odpowiada za obsługe przycisków Simulate, Calculate, Draw i Stop. Struktura Event na podstawie zmiany wartości konkretnego przycisku przechodzi do opowiadającego mu stanu zmieniając wartość enumeryczną i wysyłając ją na rejestr przesuwny pętli While. Dodatkowo stan ten odpowiada za zmiane wartości minimalnej osi X i Y wykresu mocnych punktów komozycji na 0, tak aby uzyskać jak najbardziej wiarygodną wizualizacje obiektu jakim jest akwarium.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                aria-expanded="false" aria-controls="collapseSix">
+                Main - stan Simulate
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Simulate w programie Main.vi odpowiada za połączenie całej aplikacji z plikiem SubVI.vi. Jak było już wcześniej wspomniane, program znajdujący się w pliku SubVI.vi zwraca informacje dotyczące akwarium i znajdującej się w nim wody.
+              Po otrzymaniu od użytkownika danych: wysokość, długość, szerokość (wszystkie podawane w centymetrach) oraz
+              grubości szkła (podawana w milimetrach) program liczy objętość brutto (teoretyczna, wyznaczona wyłącznie
+              na podstawie wymiarów akwarium bez uwzględnienia grubości szkła), objętość netto (właściwa, wyznaczona z
+              uwzglednieniem grubości szkła, które zawęża wewnętrzne wymiary) oraz wymagana ilość wody (minimalna
+              wartość, będąca 90% objętości netto) - wszystkie te wartości wyrażone są w litrach. Dodatkowo program
+              przeprowadza 23-dniową symulację współczynnika pH zmieniającego się dziennie o ±0,1-0,3 i przyjmując, że
+              woda w momencie nalania do akwarium była idealne (pH=7) i odrazu w pierwszym dniu (po dodaniu np. ryb)
+              zmieniła się. Wynikiem symulacji jest również tablica mówiąca czy dany współczynnik jest kwasowy, obojętny
+              lub zasadowy. Dodatkowo na podstawie tablicy zawierającej ph wody w ciągu 23 dni, powstaje wykres typu Waveform Graph w celu zwidualizowania funkcji na podstawie otrzymanych danych a także porównanie ich odchyłki od wartości optymalnej oznaczonej funkcją stałą Y=7 (pH=7). Ponadto parametr Visible wykresu zmienia się na True, zatem jest widoczny, przycisk Simulate zostaje przywrócony do wartości domyślnej (przycisk znów ma wygląd jakby nie został kliknięty) a po wykonaniu operacji wartość enumeryczna zmienia się na Idle (powrót do stanu Idle).
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSeven">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
+                aria-expanded="false" aria-controls="collapseSeven">
+                Main - stan Calculate
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Calculate w programie Main.vi odpowiada za obliczenie wagi pustego akwarium i minimalnej wagi akwarium z wodą. Wagę akwarium wyliczamy na podstawie danych wejściowych takich jak długość, szerokość, wysokość oraz grubość szyby, pamiętając o tym, aby zamienić wszystkie jednostki na metry. Po wykonaniu tego tworzymy Formula Node, w którym zamieszczamy kod odpowiadający za obliczenie wagi akwarium. Algorytm ten liczby objętość każdej ze ścian z jakich zbudowane jest akwarium a następnie mnożymy wynik przez gęstość szkła, która została przyjęta jako 2500 <sup>kg </sup>&frasl;<sub>m<sup>3</sup></sub> przez co po skróceniu m<sup>3</sup> zostają nam same kg. Końcowym wynikiem jest suma wag poszczególnych ścian (tylna, przednia, prawa boczna, lewa boczna oraz podstawa). Z kolei minimalną wagę akwarium z wodą liczymy dodając do wyznaczonej wagi pustego akwarium wagę wymaganej ilości wody (90% objętości netto) przyjmując przy tym, że jeden litr wody to jeden kilogram. Dodatkowo przycisk Calculate zostaje przywrócony do wartości domyślnej (przycisk znów ma wygląd jakby nie został kliknięty) a po wykonaniu operacji wartość enumeryczna zmienia się na Idle (powrót do stanu Idle).
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingEight">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
+                aria-expanded="false" aria-controls="collapseEight">
+                Main - stan Draw
+              </button>
+            </h5>
+          </div>
+          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Draw w programie Main.vi odpowiada za wyznaczenie współrzędnych mocnych puntków akwarium oraz narysowania ich wykresu na XY Graph'ie. 
+              <div id="accordion3" style="text-align: justify; margin: 10px;">
+                <div class="card">
+                  <div class="card-header" id="headingEight-One">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight-One"
+                        aria-expanded="false" aria-controls="collapseEight-One">
+                        Czym są mocne punkty?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseEight-One" class="collapse" aria-labelledby="headingEight-One" data-parent="#accordion3">
+                    <div class="card-body">
+                      Zacznijmy od tego czym jest złoty podział a mianowicie złoty podział znany również pod nazwami takimi jak podział harmoniczny, złota proporcja, boska proporcja to zasada stosowana w architekturze, sztuce, projektowaniu, która zakłada, że kluczowy element kompozycji powinien znaleźć się w tak zwanym mocnym punkcie. Takie mocne punkty można wyznaczyć matematycznie obliczając miejsce złotego podziału dzieląc odcinek na dwa mniejsze, których stosunek dłuższego do krótszego ma się jak 1 do 1.618 (złota liczba, &phi;). Aby skorzystać z tej zasady przy projektowaniu aranżacji na początek musimy określić, gdzie znajdują się mocne punkty wyznaczone przez linie wyznaczające złoty podział długości i wysokości akwarium. W tym celu długość i wysokość akwarium musimy podzielić przez 2,618. W miejscach wyznaczonych przez otrzymane długości należy poprowadzić prostopadłe linie. Mocne punkty wyznaczą miejsca przecięcia tych linii.</br>
+                      <div>
+                      <img src="https://peha68.pl/wp-content/uploads/2015/07/zloty-podzial-00.jpg" class="float-left" style="width: 50%;"> </img>
+                      <img src="https://peha68.pl/wp-content/uploads/2015/07/zloty-podzial-01.jpg" class="float-right" style="width: 50%;"></img>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            Obliczamy je na podstawie długości i wysokości. Wewnątrz Formula Node tworzymy 4-elementowe tablice przechowujące współrzędne X i Y. Następnie liczymy poszczególne współrzędne - pierwszą (a<sub>1</sub>) dzieląc pełny wymiar (a) przez 1.618, z kolei druga (a<sub>2</sub> to pełny wymiar minus wartości pierwszej współrzędnej (a<sub>2</sub>=a-a<sub>1</sub>). Identycznie postępujemy z wysokością i jako dane wyjściowe otrzymujemy tablice zawierającą współrzędne X punktów oraz tablice zawierającą współrzędne Y punktów, które za pomocą funkcji Bundle łączymy i tworzymy Cluster i podajemy go jako argument na wejście XY Graph. Dodatkowo skalujemy wykres mocnych punktów kompozycji ustawiając wartości maksymalne obu osi jako maksymalne wartości wymiarów akwarium, z kolei minimalne - na mininalne wartości wymiarów akwarium, czyli 0. Ponadto zmienia się wygląd punktów na wykresie (Plot.PointStyle=2, czyli większewypełnione kropki), przycisk Draw zostaje przywrócony do wartości domyślnej (przycisk znów ma wygląd jakby nie został kliknięty) a po wykonaniu operacji wartość enumeryczna zmienia się na Idle (powrót do stanu Idle).
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingNine">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
+                aria-expanded="false" aria-controls="collapseNine">
+                Main - stan Stop
+              </button>
+            </h5>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+            <div class="card-body">
+              Wartość enumeryczna stanu Stop w programie Main.vi odpowiada za zakończenie działania programu. Użytkownik otrzymuje komunikat, którego potwierdzenie kończy prace aplikacji - zmiana wartości Enum na Stop i zwrócenie wartości logicznej True do pętli While typu Stop if true. Z kolei jego
+              odrzucenie sprawia, że program działa dalej (wraca do stanu Idle). Dodatkowo przycisk Stop zostaje przywrócony do wartości domyślnej (przycisk znów ma wygląd jakby nie został kliknięty).
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTen">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+                aria-expanded="false" aria-controls="collapseTen">
+                Podsumowanie
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+            <div class="card-body">
+              Tworzenie projektu nie obyło się bez trudności, które pomogły rozwiązać zasoby Internetu oraz Help znajdujący się w LabView. Ostatecznie wszystko działa tak jak zaplanowałem.
+              <div id="accordion4" style="text-align: justify; margin: 10px;">
+                <div class="card">
+                  <div class="card-header" id="headingTen-One">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen-One"
+                        aria-expanded="false" aria-controls="collapseTen-One">
+                        Bibliografia
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTen-One" class="collapse" aria-labelledby="headingTen-One" data-parent="#accordion4">
+                    <div class="card-body">
+                        <b>Strona internetowa peHa68</b>, <a target="_blank" href="https://peha68.pl/encyclopedia/zloty-podzial/">https://peha68.pl/encyclopedia/zloty-podzial/</a> (dostęp 24.04.2019 r.).</br>
+                        <b>Strona internetowa IleToWaży.pl</b>, <a target="_blank" href=" http://iletowazy.pl/plyny/ile-wazy-litr-wody/"> http://iletowazy.pl/plyny/ile-wazy-litr-wody/</a> (dostęp 24.04.2019 r.).         
+                    </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</body>
+</html>
