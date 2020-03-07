@@ -3,7 +3,7 @@
 Repository contains files and documentation (PL) of LabVIEW project (Wrocław University of Science and Technology/Faculty of Electronics/Electronics/4th Semester/Data Acquisition and Processing Systems).
 
 ## Setup
-Run a project file (Main.vi) in LabView.
+Run a project file ([Main.vi](./Project/Main.vi)) in LabView.
 
 ## Preview (PL)
 <p align="center">
